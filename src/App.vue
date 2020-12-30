@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <img alt="Vue logo" :src="imageUrl" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld msg="Subir archivos con cloudinary" />
     <!-- <UploadCloudinary @imagenSubida="setUrl"></UploadCloudinary> -->
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+
 // import UploadCloudinary from "@/components/UploadCloudinary";
 export default {
   name: "App",
@@ -18,6 +19,9 @@ export default {
   data() {
     return {
       url: "",
+      preset: process.env.VUE_APP_HOLA,
+      cloudName: process.env.VUE_APP_CLOUD_NAME,
+      isLoading: false,
     };
   },
   computed: {
