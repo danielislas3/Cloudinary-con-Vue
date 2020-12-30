@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" :src="imageUrl" />
-    <HelloWorld msg="Subir archivos con cloudinary" />
+    <!-- <HelloWorld msg="Subir archivos con cloudinary" /> -->
     <!-- <UploadCloudinary @imagenSubida="setUrl"></UploadCloudinary> -->
+    <ApiUpload></ApiUpload>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 
 // import UploadCloudinary from "@/components/UploadCloudinary";
+import ApiUpload from "@/components/ApiUpload";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    // HelloWorld,
+    ApiUpload,
     // UploadCloudinary,
   },
   data() {
